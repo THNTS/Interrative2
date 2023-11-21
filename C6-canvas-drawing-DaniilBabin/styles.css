@@ -1,0 +1,20 @@
+body {
+    height: auto;
+    margin: 0;
+    background: linear-gradient(to bottom right, #f8c390, #d279ee);
+    color: white;
+}
+
+canvas {
+    background-color: white;
+}
+
+.settings {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.selected-style {
+    background-color: aqua;
+}

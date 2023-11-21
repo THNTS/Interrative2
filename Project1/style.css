@@ -1,0 +1,80 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+body {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    text-align: center;
+    background-color: hotpink;
+    /* position: relative; */
+}
+
+
+.page-wrapper {
+    padding-top: 200px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    /* position: absolute; */
+    max-width: 300px;
+    left: 30%;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
+}
+.h1 {
+    width: 200px;
+    text-align: center;
+}
+.picture {
+    background-image: url("./DSC00197.jpeg");
+    width: 450px;
+    height: 450px;
+    border-radius: 45%;
+  
+    background-color: black;
+    /* background-image: url("/images/hjortur_avatar.png"); */
+    background-size: cover;
+    margin-bottom: 100px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: white;
+}
+
+.picture:hover {
+    border-color: black;
+    border-width: 15px;
+    border-style: double;
+}
+
+.flag {
+    position: relative;
+    top: 80%;
+    left: 10%;
+    background-image: url("./Untitled.png");
+    width: 150px;
+    height: 100px;
+    border-radius: 25%;
+
+    background-color: black;
+    background-size: cover;
+    /* border-radius: 5px; */
+    border-style: solid;
+    border-width: 5px;
+    border-color: white;
+}
+
+.flag:hover {
+    border-color: black;
+    border-width: 25px;
+    border-style:dotted;
+}
+
+.colorChange {
+    width: 200px;
+    height: 100px;
+}
