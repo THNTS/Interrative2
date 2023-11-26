@@ -3,34 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">    
-		<title>Todo app</title>
+		<title>Final project</title>
         <link rel="stylesheet" href="styles.css"></link> 
 </head>
 <body>
-    <div class="box">
-        <div class="row header">
-            <div class="header-text">
-                Canvas
-            </div>
+    <div id="container">
+        <button id="backButton">Back</button>
+        <p>Double click to split. <a id="keyboardUp" href="#">Increase</a> / <a id="keyboardDown" href="#">decrease</a> size or <a id="keyboardLeft" href="#">Previous</a> / <a id="keyboardRight" href="#">Next</a> skin.</p>
+        <canvas id='world'></canvas>
+        <!-- <div class="row form_row" id="form"> -->
+        <form class="form" id="tasks" action="#" onsubmit="addTask();return false">
+            <label for="task_name">Task name</label><br>
+            <input class="text-inputs" type="text" id="task_name" name="task_name"><br>
+            <label for="desc">Description:</label><br>
+            <textarea class="text-inputs" type="text" id="desc" name="desc"></textarea><br>
+            <label for="due_date">Due Date:</label><br>
+            <input class="text-inputs" type="date" id="due_date" name="due_date"><br>
+            <label for="priorities">Priority:</label><br>
+            <select id="priorities" name="priorities">
+                <option value="High">High</option>
+                <option value="Medium">Medium</option>
+                <option value="Low">Low</option>
+            </select><br>
+            <button id="submitTaskButton" type="submit">Submit</button>
+        </form>
+        <form class="form" id="groups">
+            <label for="group_name">Group name</label><br>
+            <input class="text-inputs" type="text" id="group_name" name="group_name"><br>
+            <button id="submitGroupButton" type="submit">Submit</button>
+        </form>
+        <div class="chooseType">
+            <button id="newGroup">Group</button>
+            <button id="newTask">Task</button>
         </div>
-        <div class="row content">
-            <canvas id="canvas">
-                <button id="fullscreen-btn">Full Screen</button>
-            </canvas>
-        </div>
-        <!-- <div class="row settings">
-            <label for="favcolor">Select your favorite color:</label>
-            <input type="color" id="favcolor" name="favcolor" value="#000000"><br><br>
-            <label for="penWidth">Select pen width:</label>
-            <input type="range" id="penWidth" name="penWidth" value="2" min="1" max="7"><br><br>
-            <button id="reset">↺</button>
-        </div> -->
-        <div class ="row footer">
-            <div class="footer-text">
-                Done by DB
-            </div>
-        </div>
+        <!-- </div> -->
+        <div class="row content"></div>
     </div>
-    <script src="app.js" type="module"></script>
+    <div class="open">ToDo</div>
+    <!-- <script src="app.js" type="module"></script> -->
+    <script src="todo-copy.js" type="module"></script>
 </body>
 </html>

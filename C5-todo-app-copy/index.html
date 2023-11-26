@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+		<title>Todo app</title>
+        <link rel="stylesheet" href="styles.css"></link> 
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+</head>
+<body>
+    <div id="canvas-container">
+    <canvas id='canvas'></canvas>
+    </div>
+    <form class="form" id="tasks">
+        <button class="close">&#xD7;</button>
+        <label for="task_name">Task name</label><br>
+        <input class="text-inputs" type="text" id="task_name" name="task_name"><br>
+        <label for="desc">Description:</label><br>
+        <textarea class="text-inputs" type="text" id="desc" name="desc"></textarea><br>
+        <label for="due_date">Due Date:</label><br>
+        <input class="text-inputs" type="date" id="due_date" name="due_date"><br>
+        <label for="priorities">Priority:</label><br>
+        <select id="priorities" name="priorities">
+            <option value="High">High</option>
+            <option value="Medium">Medium</option>
+            <option value="Low">Low</option>
+        </select><br>
+        <button id="submitTaskButton" type="button">Submit</button>
+    </form>
+    <form class="form" id="groups">
+        <button class="close">&#xD7;</button>
+        <label for="group_name">Group name</label><br>
+        <input class="text-inputs" type="text" id="group_name" name="group_name"><br>
+        <button id="submitGroupButton" type="button">Submit</button>
+    </form>
+    <div class="chooseType">
+        <button class="close">&#xD7;</button>
+        <button id="newGroup">Group</button>
+        <button id="newTask">Task</button>
+    </div>
+    <div class="open"><span>ToDo</span></div>
+    <!-- <div id="container"> -->
+    <div class="box">
+        <div class="row directions">
+            <button id="backButton" alt="Back Button"><span>&#x25c0;</span></button>
+            <div class="currentDir"><span></span></div>
+        </div>
+        <div class="row filtering" id="buttons">
+            <label for="search">Search:</label> <input type="text" id="search">
+            <button class="sortButton" id="sort">Sort results by name</button>
+            <button class="filterButton" id="filter">Sort by Group/Tasks</button>
+        </div>
+        <div class="row content"></div>
+    </div>
+    <!-- </div> -->
+    <!-- <script src="app.js" type="module"></script> -->
+    <script src="app.js" type="module"></script>
+</body>
+</html>
